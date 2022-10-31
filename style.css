@@ -1,13 +1,4 @@
-@font-face {
-    font-family: 'Montserrat';
-    src: url(fonts/Montserrat-Regular.otf) format("opentype");
-    font-weight: 400;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url(Fonts/Montserrat-Bold.otf) format("opentype");
-    font-weight: 700;
-}
+
 *{
     box-sizing: border-box;
 }
@@ -123,6 +114,9 @@ body, html {
     margin: 50px 0;
     padding-left: 333px;
     min-height: 203px;
+    perspective: 1500px;
+    perspective-origin: right bottom;
+
 }
 .article a {
     color: inherit;
@@ -138,7 +132,9 @@ body, html {
     float: left;
     width: 308px;
     margin-right: 25px;
+    transform: rotateY(30deg);
 }
+
 .article-img img {
     width: 100%;
     height: auto;
@@ -157,4 +153,16 @@ body, html {
 
 .footer {
     clear: both;
+}
+.sidebar li a::after {
+    content: attr(data-count);
+    float: right;
+    background: grey;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    justify-content: center;
+    color: #FFF;
+    border-radius: 50%;
+    font-size: 1 rem;
 }
